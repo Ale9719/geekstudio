@@ -1,0 +1,306 @@
+body {
+  margin: 0;
+  background-color: #000;
+  font-family: 'Space Grotesk', sans-serif;
+  overflow:hidden;
+}
+* {
+  cursor: none!important;
+}
+.cursor{
+  z-index: 999;
+  position: fixed;
+  background: #ffc942;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  pointer-events: none;
+  box-shadow: 0 0 20px #ffc942,
+              0 0 60px #ffc942,
+              0 0 100px #ffc942;
+  transform: translate(-50%, -50%);
+}
+.cursor:before{
+  content: '';
+  position: absolute;
+  background: #ffc942;
+  width: 50px;
+  height: 50px;
+  opacity: 0.2;
+  transform: translate(-30%, -30%);
+  border-radius: 50%;
+}
+.click-effect{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border: 5px solid #ffc942;
+  opacity: 0;
+  pointer-events: none;
+  margin-top: -50px;
+  margin-left: -50px;
+  border-radius: 50%;
+  animation: click 0.6s linear;
+}
+@keyframes click{
+  0%{
+     opacity: 1;
+     transform: scale (0.1); 
+  }
+  10%{
+    opacity: 1;
+    transform: scale (0.2); 
+ }
+ 20%{
+  opacity: 1;
+  transform: scale (0.3); 
+}
+30%{
+  opacity: 1;
+  transform: scale (0.4); 
+}
+40%{
+  opacity: 0.9;
+  transform: scale (0.5); 
+}
+50%{
+  opacity: 0.7;
+  transform: scale (0.6); 
+}
+60%{
+  opacity: 0.5;
+  transform: scale (0.7); 
+}
+70%{
+  opacity: 0.3;
+  transform: scale (0.8); 
+}
+80%{
+  opacity: 0.1;
+  transform: scale (0.9); 
+}
+90%{
+  opacity: 0;
+  transform: scale (1); 
+}
+100%{
+  opacity: 0;
+  transform: scale (1); 
+}
+}
+
+.d-flex{
+  display: flex;
+}
+.flex-column{
+  flex-direction: column;
+}
+.justify-content-center{
+  justify-content: center;
+}
+.mb-5{
+  margin-bottom: 3rem;
+}
+.mx-5{
+  margin-right: 5rem;
+  margin-left: 5rem;
+}
+.p-5{
+  padding: 3rem;
+}
+.pb-5{
+  padding-bottom: 3rem;
+}
+.icon-bar {
+  width: 100%;
+  background-color: #000;
+  overflow: auto;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.icon-bar a, .navbar, .subtitle-header-text{
+  color: #fff;
+}
+.icon-bar a {
+  display: flex;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  text-align: center;
+  padding: 5px;
+  transition: all 0.3s ease;
+  font-size: 18px;
+  border-radius: 50%;
+  margin: 1.5rem 3rem 1.5rem 3rem;
+  text-decoration: none;
+}
+.icon-bar a:hover{
+  font-size: 28px;
+  color: #ffc942;
+  box-shadow: 0 0 50px #ffc942;
+}
+.navbar{
+  position: relative;
+}
+a.logo {
+    position: absolute;
+    top: 1rem;
+    left: 2rem;
+    z-index: 1;
+}
+.small-logo-img{
+  width: 40%;
+}
+.header-ap{
+  position: absolute;
+  top: 0;
+  background: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.title-hd{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%, -50%);
+}
+.container-header-ap {
+    max-width: 100%;
+    max-height: 100%;
+    position: relative;
+    line-height: 0;
+}
+.video-ap {
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*animazione title*/
+.subtitle-header-text {
+  position: relative;
+  margin-top: 20px;
+}
+.subtitle-header-text span {
+  position: relative;
+  display: inline-block;
+  font-size: 28px;
+  color: #fff;
+  text-transform: uppercase;
+  animation: flip 2s infinite;
+  animation-delay: calc(.2s * var(--i))
+}
+@keyframes flip {
+  0%,80% {
+     transform: rotateY(360deg)
+  }
+}
+
+
+/*CONTAINER SERVIZI*/
+.title-services{
+  color:#fff;
+  text-align: center;
+  width: 75%;
+}
+.myjob-block{
+  overflow: hidden;
+  position: relative;
+  float: right;
+  height: 65px;
+  padding-top: 10px;
+  margin-top: -10px;
+}
+.myjob-item{
+  position: relative;
+  display: block;
+  text-transform: uppercase;
+  animation: fadeIn 0.5s linear;
+  animation-fill-mode: both;
+  border: 1px solid gold;
+  width: 180px;
+  padding: 1% 0%;
+}
+
+/*animazione servizi*/
+
+.myjob {
+  position: absolute;
+  color: #fff;
+}
+
+.myjob-item:nth-child(1){
+  animation-delay: .25s;
+}
+.myjob-item:nth-child(2){
+  animation-delay: .5s;
+}
+.myjob-item:nth-child(3){
+  animation-delay: 1s;
+}
+.myjob-item:nth-child(4){
+  animation-delay: 1.25s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    top: 100px;
+  }
+  75% {
+    opacity: 0.5;
+    top: 0px;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.myjob-btn{
+  text-decoration: none;
+  -webkit-perspective: 230px;
+  perspective: 230px;
+}
+.myjob-btn span {
+  color: #fff;
+  background: transparent;
+  display: block;
+  position: absolute;
+  width: 180px;
+  height: 40px;
+  margin:0;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.myjob-btn span:nth-child(1) {
+  -webkit-transform: rotateX(90deg);
+  -moz-transform: rotateX(90deg);
+  transform: rotateX(90deg);
+  -webkit-transform-origin: 50% 50% -20px;
+  -moz-transform-origin: 50% 50% -20px;
+  transform-origin: 50% 50% -20px;
+}
+.myjob-btn span:nth-child(2) {
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  -webkit-transform-origin: 50% 50% -20px;
+  -moz-transform-origin: 50% 50% -20px;
+  transform-origin: 50% 50% -20px;
+}
+.myjob-btn:hover span:nth-child(1) {
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+}
+.myjob-btn:hover span:nth-child(2) {
+ color: transparent;
+  -webkit-transform: rotateX(-90deg);
+  -moz-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
+}
