@@ -1,7 +1,8 @@
 body {
   margin: 0;
   background-color: #000;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: "Share Tech Mono", monospace;
+  font-weight: 400;
   overflow: auto;
 }
 *{
@@ -96,10 +97,6 @@ body {
   font-family: "Signika", sans-serif;
   font-weight: 600;
 }
-.text-code{
-  font-family: "Share Tech Mono", monospace;
-  font-weight: 400;
-}
 h1, .h1{
   font-size: 42px;
 }
@@ -111,6 +108,9 @@ h3, .h3{
 }
 h4, .h4{
   font-size: 24px;
+}
+p{
+  line-height: 30px;
 }
 .d-flex{
   display: flex;
@@ -265,4 +265,3 @@ a.logo {
 .flip-card-back {
   transform: rotateY(180deg);
 }
-
